@@ -119,5 +119,5 @@ def test():
 start_time = time.time()
 for epoch in range(1, args.epochs + 1):
     train(epoch)
-    test()
 print("--- Training Time - %s seconds ---" % (time.time() - start_time))
+test()
