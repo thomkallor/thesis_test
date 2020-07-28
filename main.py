@@ -6,6 +6,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.autograd import Variable
+import time
 
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Example')
@@ -117,5 +118,7 @@ def test():
 
 
 for epoch in range(1, args.epochs + 1):
+    start_time = time.time()
     train(epoch)
+    print("--- Training Time - %s seconds ---" % (time.time() - start_time))
     test()
