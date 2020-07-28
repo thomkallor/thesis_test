@@ -116,9 +116,8 @@ def test():
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
-
+start_time = time.time()
 for epoch in range(1, args.epochs + 1):
-    start_time = time.time()
     train(epoch)
-    print("--- Training Time - %s seconds ---" % (time.time() - start_time))
     test()
+print("--- Training Time - %s seconds ---" % (time.time() - start_time))
