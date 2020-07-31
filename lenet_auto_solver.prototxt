@@ -12,7 +12,7 @@ base_lr: 0.01
 momentum: 0.5
 weight_decay: 0
 # The learning rate policy
-lr_policy: "step"
+lr_policy: "fixed"
 gamma: 0
 power: 0.75
 # Display every 100 iterations
